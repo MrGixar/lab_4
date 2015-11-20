@@ -1,0 +1,69 @@
+__author__ = 'student'
+import math
+
+#1
+a=int(input("Введіть a"))
+b=int(input("Введіть b"))
+c=b+1
+for x in range(a,c):
+    x=x**2
+print("Квадрати цілих чисел від a до b: "+ str(x))
+#2
+b=[]
+N=int(input("Введіть число"))
+for x in range(0,N):
+    b.append(math.cos(x))
+c=sum(b)
+print(b)
+
+#3
+a=[]
+k1=int(input("Введіть бажану точність"))
+for x in range(1,5):
+    for k in range(0,k1):
+        c=(((-1)**k)*(x/2**(2*k+1))/((k+1)*(math.factorial(k))))
+    a.append(c)
+b=sum(a)
+print(b)
+
+#4
+x=int(input("Введіть кільскість пляшок"))
+for i in range(-x,0):
+    i1=i+1
+    a=(str(abs(i))+" green bottles hanging on the wall,\n")
+    b=(str(abs(i))+" green bottles hanging on the wall,\n")
+    c=("And if one green bottle should accidentally fall,\n")
+    d=("There’ll be "+str(abs(i1))+" green bottles hanging on the wall.")
+    print(str(a)+str(b)+str(c)+str(d))
+
+#5
+#5.1
+x=float(input("Введіть вагу одного зерна"))
+for i in range(1,16):
+    a=2**i
+b=a*x
+print(b)
+
+#5.2
+
+#6
+import sys
+import time
+for x in range(101):
+    sys.stdout.flush()
+    sys.stdout.write("\rProgress:"+"▓"*x)
+    time.sleep(0.2)
+
+#7
+n=10
+x=[]
+for i in range (2,n+1):
+    x.append(i)
+pr=x[0]
+x.remove(pr)
+xt=tuple(x)
+print(pr)
+for i in xt:
+    if x[i]%pr==0:
+        x.remove(x[i])
+print(x)
